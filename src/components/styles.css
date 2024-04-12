@@ -1,0 +1,103 @@
+.input {
+    display: flex;
+    width: 90%;
+    position: relative;
+    align-items: center;
+}
+
+.input__box{
+    width: 100%;
+    border-radius: 50px;
+    padding: 20px 30px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px #0000;
+}
+/* create shadow outside the input eement when on focus */
+.input__box:focus {
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.7);
+    outline: none;
+}
+
+.input__submit {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    border-radius: 50px;
+    right: 0px;
+    border: none;
+    font-size: 15px;
+    background-color: rgb(83, 123, 217);
+    color: white;
+    transition: 0.2s ;
+    box-shadow: 0 0 10px black;
+}
+
+.input__submit:hover {
+    background-color: rgb(148, 148, 243);
+}
+
+.input__submit:active {
+    transform: scale(0.5);
+    box-shadow: 0 0 5px black;
+}
+
+/* todo component */
+.todos {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+/* single to do */
+.single__todo {
+    display: flex;
+    width: 29.5%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: #ffd966 ;
+    font-weight: bold;
+}
+
+.todos_text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.todos_text:focus {
+    outline: none;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* for big screen */
+@media (max-width: 1200px) {
+    .single__todo {
+        width: 40%;
+    }
+}
+
+/* for phone screen */
+@media (max-width: 700px) {
+    .input {
+    width: 95%;
+    }
+
+    .todos {
+        width: 95%;
+    }
+
+    .single__todo {
+        width: 100%;
+    }
+}
